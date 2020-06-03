@@ -1,0 +1,194 @@
+
+/* General */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    font-size: 13px;
+    color: #666666;
+}
+
+label {
+    margin-bottom: 0.7em;
+}
+
+input {
+    font-size: 13px;
+    font-family: 'Muli', sans-serif;
+    color: #333;
+}
+
+:focus {
+    outline: none;
+}
+
+/* Typography */
+
+.form-title {
+    font-size: 1.4rem;
+    opacity: 0.78;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+
+.copyright-p {
+    padding-bottom: 1em;
+    opacity: 0.7;
+}
+
+.copyright-a {
+    display: inline-block;
+    text-decoration: none;
+    color: #AE3C33;
+    transform: scale(1);
+    transition: transform 250ms ease-in-out, 
+                color 250ms ease-in-out;
+}
+
+.copyright-a:hover,
+.copyright-a:focus {
+    color:  #f11a09;
+    transform: scale(1.03);
+}
+
+/* Layout */
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.404);
+    background-size: cover;
+    background-image: url('/images/bg-registration-form-2.jpg');
+    /* background-blend-mode: overlay; */
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: auto;
+    position: relative;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.4em;
+}
+
+.form-group {
+    display: flex; 
+}
+
+.form-wrapper-name {
+    width: 50%;
+}
+
+.form-wrapper-name:first-child {
+    margin-right: 1.2em;
+}
+
+.form-control {
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: transparent;
+    width: 100%;
+    padding: 0.7em 0.8em;
+    transform: scale(1);
+    transition: transform 250ms ease-in-out;
+}
+
+.form-control:focus {
+    transform: scale(1.03);
+}
+
+
+
+.input-checkbox {
+    margin-right: 1em;
+}
+
+.input-checkbox:focus {
+    outline: 1px solid #AE3C33;
+}
+
+/* Button */
+
+.btn-primary {
+    display: block;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+    background: #AE3C33;
+    padding: 0.9em 2em;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 2em;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 400ms ease-in-out;
+}
+
+.btn-primary::after {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f11a09;
+    opacity: 0.5;
+    position: absolute;
+    border-radius: 20px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 400ms ease-out, 
+                opacity 250ms ease-in-out;
+}
+
+.btn-primary:hover::after,
+.btn-primary:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 1;
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.03);
+}
+
+:focus {
+    border: 1px solid #AE3C33;
+}
+
+/* Media Query */
+
+@media (min-width: 800px) {
+    .card-container {
+        background-image: url('images/registration-form-2.jpg');
+        background-size: cover;
+        min-width: 800px;
+    }
+
+    .registration-form {
+        max-width: 380px;
+    }
+}

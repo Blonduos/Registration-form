@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorlib Form Template Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="card-container">
+            
+            <form action="#" class="registration-form" method="POST">
+                <h1 class="form-title">Registration form</h1>
+                <div class="form-group">
+                    <div class="form-wrapper form-wrapper-name">
+                        <label for="name" id="first-name-label" class="name-label">First Name</label>
+                        <input  
+                        id="first-name" 
+                        name="name"
+                        type="name"
+                        class="form-control"
+                        required>
+                    </div>
+                    <div class="form-wrapper form-wrapper-name">
+                        <label for="name" id="last-name-label" class="name-label">Last Name</label>
+                        <input  
+                        id="last-name" 
+                        name="name"
+                        type="name"
+                        class="form-control"
+                        required>
+                    </div>
+                </div>
+
+                <div class="form-wrapper">
+                    <label for="email" id="email">Email</label>
+                    <input 
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    required>
+                </div>
+                
+                <div class="form-wrapper">
+                    <label for="password" id="password">Password</label>
+                    <input 
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    required>
+                </div>
+
+                <div class="form-wrapper">
+                    <label for="password" id="repeat-password">Confrim Password</label>
+                    <input 
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    required>
+                </div>
+
+                <div class="form-wrapper">
+                    <label>
+                        <input
+                        name="terms-of-use"
+                        value="terms-of-use"
+                        type="checkbox"
+                        class="input-checkbox"
+                        />I accept the Terms of Use & Privacy Policy
+                    </label>
+                </div>
+                <button class="btn btn-primary" type="submit">Register now</button>
+            </form>
+        </div>
+        <p class="copyright-p">This template was made by <a href="https://colorlib.com" target="_blank" class="copyright-a">Colorlib</a></p>
+        <p class="copyright-p">This is a practice project based on a design</p>
+    </div>
+</body>
+</html>
